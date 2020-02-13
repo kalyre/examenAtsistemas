@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>chat</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<app-message *ngFor="let messag of chatMessages" param='{{ messag }}'></app-message>
+  <ion-item>
+    <ion-input placeholder="Escribe un mensaje..." [(ngModel)]="message"></ion-input>
+    <ion-button (click)="sendMessage($event)">
+      <ion-icon name="finger-print"></ion-icon>
+    </ion-button>
+  </ion-item>
+</ion-content>
